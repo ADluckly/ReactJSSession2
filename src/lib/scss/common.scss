@@ -1,0 +1,13 @@
+.content-align-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

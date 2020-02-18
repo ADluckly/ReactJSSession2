@@ -1,0 +1,31 @@
+.login{
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    .login-clear-button {
+        width: 100%;
+        margin-top: 20px;
+
+        .login-clear-button-text {
+            display: inline-block;
+            cursor: pointer;
+            font-weight: 400;
+            text-align: center;
+            box-sizing: border-box;
+            will-change: background-color, transform;
+            -webkit-tap-highlight-color: transparent;
+            color: rgb(255, 255, 255);
+            height: 48px;
+            min-width: 160px;
+            border-radius: 32px;
+            transition: all 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s;
+            text-decoration: none;
+            background: rgb(165, 164, 164);
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+            padding: 0px 24px;
+        }
+    }
+}
