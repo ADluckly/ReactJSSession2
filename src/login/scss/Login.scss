@@ -1,7 +1,13 @@
-.login{
+.login {
     height: 100%;
     padding-left: 10%;
     padding-right: 10%;
+
+    .login-tips {
+        font-size: 16px;
+        color: rgb(245, 42, 42);
+    }
+
     .login-clear-button {
         width: 100%;
         margin-top: 20px;
