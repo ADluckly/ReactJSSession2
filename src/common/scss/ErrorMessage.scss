@@ -1,0 +1,10 @@
+@import 'Common';
+
+.error-msg {
+    @extend %common-transition;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.75em;
+    cursor: pointer;
+    color: $primary-error-color;
+}

@@ -1,0 +1,11 @@
+@import '../../common/scss/Common.scss';
+
+.login {
+    height: 100%;
+    padding: 0 10%;
+
+    &-tips {
+        font-size: 16px;
+        color: $primary-tips-color
+    }
+}
