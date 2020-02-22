@@ -1,0 +1,51 @@
+@import 'Common';
+
+.common-input {
+    margin-bottom: 26px;
+    
+    label {
+        margin-bottom: 8px;
+        font-size: 0.75em;
+        font-weight: 700;
+        line-height: 16px;
+        color: $primary-color;
+    }
+    
+    input {
+        @include border-radius(4px);
+        cursor: pointer;
+        height: 42px;
+        line-height: 16px;
+        width: 100%;
+        color: $primary-color;
+        border: 1px solid $primary-input-border-color;
+        font-size: 0.87em;
+        letter-spacing: 0.125px;
+        padding: 0 15px;
+    }
+
+    &-input-box {
+        display: flex;
+    }
+    
+    &-top-remark, &-bottom-remark {
+        @extend %common-transition;
+        font-size: 0.75em;
+        letter-spacing: 0.25px;
+        cursor: pointer;
+    }
+
+    &-top-remark {
+        line-height: 16px;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: normal !important;
+        color: $primary-top-remark-color !important;
+    }
+
+    &-bottom-remark {
+        height: 20px;
+        line-height: 20px;
+        color: $primary-bottom-remark-color;
+    }
+}

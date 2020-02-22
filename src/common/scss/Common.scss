@@ -1,0 +1,43 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(34, 37, 43);
+$primary-input-border-color: rgb(199, 202, 209);
+$primary-top-remark-color: rgb(110, 112, 119);
+$primary-bottom-remark-color: rgb(39, 110, 229);
+$primary-error-color: rgb(229, 39, 39);
+$primary-button-background-color: rgb(255, 51, 102);;
+$primary-button-color: rgb(255, 255, 255);
+$primary-tips-color: rgb(245, 42, 42);
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -ms-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+%common-transition {
+    transition: color 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s, text-decoration;
+}  
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+.flex-start-colum {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
