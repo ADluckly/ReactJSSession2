@@ -1,0 +1,58 @@
+.login-content {
+    width: 100%;
+
+    .login-email {
+        margin-top: 20px;
+
+        &-remark {
+            height: 20px;
+            line-height: 20px;
+            font-size: .75em;
+            cursor: pointer;
+            color: rgb(39, 110, 229);
+        }
+    }
+
+    .login-password {
+        margin-top: 15px;
+
+        .login-password-label-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .login-label, .login-label-remark {
+        font-size: .75em;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        margin-bottom: 8px;
+    }    
+
+    .login-label {
+        font-weight: 700;
+        cursor: pointer;
+        color: rgb(34, 37, 43);
+    }
+
+    .login-input {
+        height: 42px;
+        width: 100%;
+        padding-left: 10px;
+        font-size: .87em;
+        line-height: 16px;
+        letter-spacing: 0.125px;
+        color: rgb(34, 37, 43);
+        border: 1px solid rgb(199, 202, 209);
+        border-radius: 4px;
+    }
+
+    .login-label-remark {
+        cursor: pointer;
+        box-sizing: border-box;
+        color: rgb(110, 112, 119);
+        padding: 0px;
+    }
+}
