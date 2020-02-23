@@ -1,0 +1,12 @@
+.login {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 10%;
+
+    &-tips {
+        font-size: 16px;
+        color: rgb(245, 42, 42);
+    }
+}

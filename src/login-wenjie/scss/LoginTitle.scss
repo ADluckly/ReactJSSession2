@@ -1,0 +1,15 @@
+.login-title {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 120px;
+
+    .login-header-title, .login-sub-title {
+        margin: 10px 0;
+        text-align: left;
+    }
+    
+    .login-sub-title {
+        font-weight: normal;
+    }
+}
