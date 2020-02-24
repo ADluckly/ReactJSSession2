@@ -3,7 +3,7 @@ import LoginErrorMessage from './LoginErrorMessage'
 import './scss/LoginContent.scss'
 import '../lib/scss/common.scss'
 
-class LoginContent extends React.Component {
+    class LoginContent extends React.Component {
 
     constructor(props) {
         super(props)
@@ -21,18 +21,6 @@ class LoginContent extends React.Component {
         console.log('Login Content Component DID MOUNT!')
     }
 
-    // static getDerivedStateFromProps(nextProps, prevState) {
-    //     console.log('=============================================')
-    //     console.log('Login Content get Derived State From Props!')
-    //     if (prevState !== nextProps) {
-    //         return {
-    //             email: nextProps.email,
-    //             password: nextProps.password
-    //         };
-    //     }
-    //     // Return null to indicate no change to state.
-    //     return null;
-    // }
     componentDidUpdate(prevProps, prevState) {
         console.log('Login Content Component DID UPDATE!')
     }
@@ -65,7 +53,7 @@ class LoginContent extends React.Component {
     }
 
     isEmail(str) {
-        var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+        var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         return reg.test(str);
     }
     isInValidValue(text) {
@@ -77,9 +65,9 @@ class LoginContent extends React.Component {
     }
 
     onSignIn() {
-        // this.refs.emailInput.focus();
+        this.refs.emailInput.focus();
         if (!this.isInValidValue(this.state.email) && !this.isInValidValue(this.state.password) && !this.state.isEmailError) {
-            this.props.onSignIn();
+           this.props.onSignIn();
         }
         else {
             return
@@ -112,7 +100,7 @@ class LoginContent extends React.Component {
                         <label className='login-label-remark'>{loginPasswordRemarkLabel}</label>
                     </div>
                     <div className='login-email-operation'>
-                        <input name='password' type='text' ref='passwordInput' className='login-input' value={this.state.password} onChange={this.onChangeValue}></input>
+                        <input name='password' type='password' ref='passwordInput' className='login-input' value={this.state.password} onChange={this.onChangeValue}></input>
                     </div>
                 </div>
                 <div className='login-button content-align'>

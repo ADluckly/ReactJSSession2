@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import * as serviceWorker from './serviceWorker';
-
+import App from './App';
 import Login from './login/Login'
-
-import Test from './test/Test'
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Login />, document.getElementById('root'));
 

@@ -24,15 +24,9 @@ class Login extends React.Component {
             password: '123456',
             isLogin: false
         }
-        this.onClearClick = this.onClearClick.bind(this);
         this.onSignIn = this.onSignIn.bind(this);
     }
-    onClearClick() {
-        this.setState({
-            email: '',
-            password: ''
-        })
-    }
+  
 
     componentDidMount() {
         console.log(this.refs.loginContentRef); // 访问挂载在组件上ref
@@ -67,13 +61,7 @@ class Login extends React.Component {
 
                 {!this.state.isLogin && <div className='login-tips'>Please sign in</div>}
                 {this.state.isLogin && <div className='login-tips'>Welcome!</div>}
-                {/* <LoginContent email={this.state.email} password={password}/> */}
                 <LoginContent {...loginContentProps} ref='loginContentRef' />
-                {/* <div className='login-clear-button content-align'>
-                    <button className='login-clear-button-text' onClick={this.onClearClick}>
-                        Clear
-                    </button>
-                </div> */}
             </div>
         );
     }
