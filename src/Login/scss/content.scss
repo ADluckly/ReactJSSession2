@@ -1,0 +1,30 @@
+.content{
+    .form-control{
+        margin: 1rem 0;
+        .label{
+            margin: .4rem 0;
+            label{
+                font-weight: 600;
+            }
+        }
+        .label-info{
+            font-weight: 300;
+            float: right;
+            font-size: .5rem;
+        }
+        .info{
+            color: blue;
+            font-size: .75rem;
+            font-weight: 300;
+        }
+        .error-info{
+            color: #ff4d4f;
+            font-weight: 400;
+            font-size: .5rem;
+        }
+    }
+    .btn{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
