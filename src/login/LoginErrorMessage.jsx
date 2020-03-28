@@ -3,13 +3,13 @@ import './scss/LoginErrorMessage.scss'
 
 class LoginErrorMessage extends React.Component {
     componentDidMount() {
-        console.log('Login Error Message Component DID MOUNT!')
+        console.log('Login Error Message Component DID MOUNT ===!')
     }
     componentDidUpdate(prevProps, prevState) {
-        console.log('Login Error Message Component DID UPDATE!')
+        console.log('Login Error Message Component DID UPDATE====!')
     }
     componentWillUnmount() {
-        console.log('Login Error Message Component WILL UNMOUNT!')
+        console.log('Login Error Message Component WILL UNMOUNT====!')
     }
     render() {
         return (

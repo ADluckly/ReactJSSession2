@@ -5,7 +5,7 @@ import './scss/common.scss'
 
 class Chatbot extends React.Component {
   state = {
-    name: 'Joey'
+    name: 'Adam'
   }
   constructor(props) {
     super(props)
@@ -16,7 +16,7 @@ class Chatbot extends React.Component {
 
   changNameParent() {
     this.setState({
-      name: 'Weibin'
+      name: 'dada'
     })
   }
 

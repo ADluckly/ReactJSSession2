@@ -21,18 +21,7 @@ class LoginContent extends React.Component {
         console.log('Login Content Component DID MOUNT!')
     }
 
-    // static getDerivedStateFromProps(nextProps, prevState) {
-    //     console.log('=============================================')
-    //     console.log('Login Content get Derived State From Props!')
-    //     if (prevState !== nextProps) {
-    //         return {
-    //             email: nextProps.email,
-    //             password: nextProps.password
-    //         };
-    //     }
-    //     // Return null to indicate no change to state.
-    //     return null;
-    // }
+
     componentDidUpdate(prevProps, prevState) {
         console.log('Login Content Component DID UPDATE!')
     }
