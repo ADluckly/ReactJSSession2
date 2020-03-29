@@ -1,0 +1,70 @@
+.App {
+  text-align: center; }
+
+.App-body {
+  max-width: 320px;
+  margin: 0 auto; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  text-align: left; }
+
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-size: 0.5em; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.account-title, .password-title {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold; }
+  .account-title .second-title, .password-title .second-title {
+    float: right;
+    font-weight: normal;
+    font-size: 12px; }
+
+.account-error {
+  color: red;
+  font-size: 12px; }
+
+.account-input, .password-input {
+  height: 30px;
+  width: 100%; }
+
+.login-button {
+  border-style: hidden;
+  margin-top: 20px;
+  border-radius: 40px;
+  background-color: pink;
+  text-align: center;
+  height: 30px;
+  color: white; }
+  .login-button:disabled {
+    background-color: gray; }
+
+@media screen and (min-width: 480px) {
+  .App-body {
+    max-width: 320px;
+    margin: 0 auto; }
+  .login-button {
+    width: 100px; } }
+
+@media screen and (min-width: 1280px) {
+  .App-body {
+    max-width: 640px;
+    margin: 0 auto; }
+  .login-button {
+    width: 180px; } }
