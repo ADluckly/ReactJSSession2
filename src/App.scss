@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.App-body {
+  max-width: 640px;
+  margin: 30px auto;
+  a {
+    margin-left: 10px;
+  }
+  .ant-row {
+    margin-top: 10px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.title {
+  text-align: right;
+}
