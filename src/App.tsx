@@ -1,118 +1,75 @@
+import 'antd/dist/antd.css';
 import * as React from 'react';
 import './App.css';
+import { Row, Col, InputNumber, Switch, Slider, Select, DatePicker, Button } from 'antd';
 
-class AccountInput extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    return(
-      <div>
-        <p className="account-title">Email address</p>
-        <input className="account-input" onChange={this.props.handleChange} placeholder="caiweipeng@yeah.net" />
-        <p className="account-error">{this.props.error}</p>
-      </div>
-    )
-  }
-}
-
-class PasswordInput extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props)
-  }
-
-  public render() {
-    return (
-      <div>
-        <p className="password-title">
-          <span className="first-title">Password</span>
-          <span className="second-title">Forgot your password?</span>
-        </p>
-        <input className="password-input" onChange={this.props.handleChange} placeholder="!Abcd1234" />
-      </div>
-    )
-  }
-}
-
-class LoginButton extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props)
-  }
-
-  public render() {
-    return (
-      <div>
-        <button className="login-button" disabled={this.props.data}>Sign in</button>
-      </div>
-    )
-  }
-}
-
+const { Option } = Select;
 class App extends React.Component<any, any> {
-  public errorMsg: any;
+  
   constructor(props: any) {
     super(props);
-    this.validAccount = this.validAccount.bind(this);
-    this.validPassword = this.validPassword.bind(this);
-    this.state = {
-      account: '',
-      isAccount: true,
-      isPassword: true,
-      password: ''
-    }
-  }
-
-  public validAccount(e: any) {
-    const value = e.target.value;
-    const emailStr = new RegExp('^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$');
-    this.setState({
-      account: value
-    });
-    if (emailStr.test(value)) {
-      this.setState({
-        isAccount: false
-      });
-      this.errorMsg = '';
-    } else {
-      this.setState({
-        isAccount: true
-      })
-      this.errorMsg = `The format doesn't look right. Make sure there aren't any typos`;
-    }
-  }
-
-  public validPassword(e: any) {
-    const value = e.target.value;
-    this.setState({
-      password: value
-    });
-
-    if (value) {
-      this.setState({
-        isPassword: false
-      });
-    } else {
-      this.setState({
-        isPassword: true
-      });
-    }
   }
 
   public render() {
     return (
-      <div className="App">
-        <div className="App-body">
-          <header className="App-header">
-            <h1>Sign in to InVision</h1>
-            <h2>Enter your details below</h2>
-          </header>
-          <AccountInput value={this.state.account} handleChange={this.validAccount} error={this.errorMsg} />
-          <PasswordInput value={this.state.password} handleChange={this.validPassword} />
-          <LoginButton data={this.state.isAccount || this.state.isPassword} />
-        </div>
+      <div className="App-body">
+        <Row justify="space-around" align="middle">
+          <Col span={4} className="title">
+            数字输入框:
+          </Col>
+          <Col span={1}></Col>
+          <Col span={19}>
+            <InputNumber style={{width: 100}} />台机器
+            <a>链接文字</a>
+          </Col>
+        </Row>
+        <Row justify="space-around" align="middle">
+          <Col span={4} className="title">
+            开关:
+          </Col>
+          <Col span={1}></Col>
+          <Col span={19}>
+            <Switch defaultChecked></Switch>
+          </Col>
+        </Row>
+        <Row justify="space-around" align="middle">
+          <Col span={4} className="title">滑动输入条</Col>
+          <Col span={1}></Col>
+          <Col span={19}>
+            <Slider defaultValue={30}></Slider>
+          </Col>
+        </Row>
+        <Row justify="space-around" align="middle">
+          <Col span={4} className="title">选择器</Col>
+          <Col span={1}></Col>
+          <Col span={19}>
+            <Select defaultValue="A" style={{width: 100}}>
+              <Option value="A">A</Option>
+              <Option value="B">B</Option>
+              <Option value="C">C</Option>
+              <Option value="D">D</Option>
+            </Select>
+          </Col>
+        </Row>
+        <Row justify="space-around" align="middle">
+          <Col span={4} className="title">
+            日期选择框
+          </Col>
+          <Col span={1}></Col>
+          <Col span={19}>
+            <DatePicker></DatePicker>
+          </Col>
+        </Row>
+        <Row>
+          <Col span={5}></Col>
+          <Col span={19}>
+            <Button type="primary" style={{marginRight: 10}}>确定</Button>
+            <Button>取消</Button>
+          </Col>
+        </Row>
       </div>
-    );
+      
+    )
   }
 }
 

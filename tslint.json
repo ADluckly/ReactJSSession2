@@ -10,6 +10,9 @@
   },
   "rules": {
     "max-classes-per-file": false,
-    "no-console": false
+    "no-console": false,
+    "ordered-imports": false,
+    "jsx-self-close": false,
+    "jsx-boolean-value": false
   }
 }
