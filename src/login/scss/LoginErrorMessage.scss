@@ -1,18 +1,6 @@
-.login-error-msg {
-    height: 20px;
-    line-height: 20px;
+.login-error-message {
+    color: red;
     font-size: 12px;
-    text-decoration-skip-ink: auto;
-    cursor: pointer;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    color: rgb(229, 39, 39);
-    background: none;
-    padding: 0px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    transition: color 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s, text-decoration;
-    text-decoration: underline transparent;
+    line-height: 16px;
+    margin-top: 4px;
 }
