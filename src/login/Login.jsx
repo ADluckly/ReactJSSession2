@@ -1,81 +1,75 @@
 import React from 'react';
+import LoginTitle from './LoginTitle';
+import LoginContent from './LoginContent';
+import './scss/Login.scss';
 
-import LoginTitle from './LoginTitle'
-import LoginContent from './LoginContent'
-
-import './scss/Login.scss'
-import '../lib/scss/common.scss'
-
-const labelJson = {
+const loginLabel = {
     loginTitle: 'Sign in to InVision',
     loginSubTitle: 'Enter your details below',
     loginEmailLabel: 'Email address',
-    loginEmailRemarkLabel: 'Know your team domain?',
+    loginEmailRemark: 'Know your team domain?',
+    loginEmailErrorMessage: 'The email format is invalid',
     loginPasswordLabel: 'Password',
-    loginPasswordRemarkLabel: 'Forgot your password?'
-}
+    loginPasswordRemark: 'Forgot your password?',
+    loginPasswordErrorMessage: 'The password can not be empty',
+    loginButtonName: 'Sign in'
+};
 
 class Login extends React.Component {
 
     constructor(props) {
-        super(props)
+        super(props);
+        this.onSignIn = this.onSignIn.bind(this);
         this.state = {
-            email: 'AD',
-            password: '123456',
+            email: '',
+            password: '',
             isLogin: false
         }
-        this.onClearClick = this.onClearClick.bind(this);
-        this.onSignIn = this.onSignIn.bind(this);
-    }
-    onClearClick() {
-        this.setState({
-            email: '',
-            password: ''
-        })
-    }
-
-    componentDidMount() {
-        console.log(this.refs.loginContentRef); // 访问挂载在组件上ref
-        console.log(this.refs.loginContentRef.refs.emailInput); // 访问挂载在dom元素上的ref
-        this.refs.loginContentRef.refs.emailInput.focus();
+        this.loginContentRef = React.createRef();
     }
 
     onSignIn() {
-        debugger;
-        this.setState({
-            isLogin: true
-        })
+        this.setState({isLogin: true});
     }
 
     render() {
         const loginTitleProps = {
-            loginTitle: labelJson.loginTitle,
-            loginSubTitle: labelJson.loginSubTitle
+            loginTitle: loginLabel.loginTitle,
+            loginSubTitle: loginLabel.loginSubTitle
         }
         const loginContentProps = {
-            loginEmailLabel: labelJson.loginEmailLabel,
-            loginEmailRemarkLabel: labelJson.loginEmailRemarkLabel,
-            loginPasswordLabel: labelJson.loginPasswordLabel,
-            loginPasswordRemarkLabel: labelJson.loginPasswordRemarkLabel,
             email: this.state.email,
             password: this.state.password,
-            onSignIn: this.onSignIn
-        }
+            onSignIn: this.onSignIn,
+            loginEmailLabel: loginLabel.loginEmailLabel,
+            loginEmailRemark: loginLabel.loginEmailRemark,
+            loginEmailErrorMessage: loginLabel.loginEmailErrorMessage,
+            loginPasswordLabel: loginLabel.loginPasswordLabel,
+            loginPasswordRemark: loginLabel.loginPasswordRemark,
+            loginPasswordErrorMessage: loginLabel.loginPasswordErrorMessage,
+            loginButtonName: loginLabel.loginButtonName
+        };
         return (
             <div className='login'>
                 <LoginTitle {...loginTitleProps} />
-
                 {!this.state.isLogin && <div className='login-tips'>Please sign in</div>}
                 {this.state.isLogin && <div className='login-tips'>Welcome!</div>}
-                {/* <LoginContent email={this.state.email} password={password}/> */}
-                <LoginContent {...loginContentProps} ref='loginContentRef' />
-                {/* <div className='login-clear-button content-align'>
-                    <button className='login-clear-button-text' onClick={this.onClearClick}>
-                        Clear
-                    </button>
-                </div> */}
+                <LoginContent {...loginContentProps} ref={this.loginContentRef} />
             </div>
         );
+    }
+
+    componentDidMount() {
+        console.log('Login componentDidMount');
+        this.loginContentRef.current.emailInputRef.current.focus();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log('Login componentDidUpdate');
+    }
+
+    componentWillUnmount() {
+        console.log('Login componentWillUnmount');
     }
 }
 

@@ -1,22 +1,29 @@
 .login-title {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 40%;
 
     .login-header-title {
-        width: 100%;
-        font-size: 28px;
-        font-weight: 600;
-        line-height: 36px;
-        color: rgb(34, 37, 43);
-        text-align: left;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 32px;
     }
 
     .login-sub-title {
+        color: grey;
         font-size: 16px;
-        font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0.125px;
-        color: rgb(34, 37, 43);
-        text-align: left;
+        font-weight: 400;
+        line-height: 16px;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .login-title {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .login-title {
+        margin-top: 10%;
     }
 }
