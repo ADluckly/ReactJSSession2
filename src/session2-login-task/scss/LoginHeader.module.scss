@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  margin-top: 80px;
+
+  .title {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    color: rgb(34, 37, 43);
+    text-align: left;
+  }
+
+  .subTitle {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.125px;
+    color: rgb(34, 37, 43);
+    text-align: left;
+  }
+
+  .tips {
+    font-size: 16px;
+    color: rgb(245, 42, 42);
+  }
+}

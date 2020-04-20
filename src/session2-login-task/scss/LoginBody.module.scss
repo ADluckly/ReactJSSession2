@@ -1,0 +1,132 @@
+.container {
+  width: 100%;
+
+  .email {
+    margin-top: 20px;
+
+    .emailRemark {
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      text-decoration-skip-ink: auto;
+      cursor: pointer;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      color: rgb(39, 110, 229);
+      background: none;
+      padding: 0px;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      transition: color 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s, text-decoration;
+      text-decoration: underline transparent;
+    }
+    .emailErrorMsg {
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      text-decoration-skip-ink: auto;
+      cursor: pointer;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      color: rgb(229, 39, 39);
+      background: none;
+      padding: 0px;
+      border-width: 0px;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      transition: color 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s, text-decoration;
+      text-decoration: underline transparent;
+    }
+  }
+  .password {
+    margin-top: 15px;
+
+    .pwdTitle {
+      display: flex;
+      justify-content: space-between;
+
+      .pwdRemark {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        display: block;
+        margin-bottom: 8px;
+        text-decoration-skip-ink: auto;
+        cursor: pointer;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        color: rgb(110, 112, 119);
+        background: none;
+        padding: 0px;
+        border-width: 0px;
+        border-style: initial;
+        border-color: initial;
+        border-image: initial;
+        transition: color 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s, text-decoration;
+        text-decoration: underline transparent;
+      }
+    }
+  }
+  .loginBtn {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .loginBtnText {
+        display: inline-block;
+        cursor: pointer;
+        font-weight: 400;
+        text-align: center;
+        box-sizing: border-box;
+        will-change: background-color, transform;
+        -webkit-tap-highlight-color: transparent;
+        color: rgb(255, 255, 255);
+        height: 48px;
+        min-width: 160px;
+        border-radius: 32px;
+        transition: all 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s;
+        text-decoration: none;
+        background: rgb(255, 51, 102);
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        padding: 0px 24px;
+    }
+}
+
+  .loginLabel {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(34, 37, 43);
+  }
+
+  .loginInput {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0.125px;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: none;
+    color: rgb(34, 37, 43);
+    height: 48px;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(199, 202, 209);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 15px;
+    transition: all 0.2s cubic-bezier(0.2, 0.91, 0.85, 0.96) 0s;
+  }
+}

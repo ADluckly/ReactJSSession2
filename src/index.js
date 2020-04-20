@@ -7,7 +7,10 @@ import Login from './login/Login'
 
 import Test from './test/Test'
 
-ReactDOM.render(<Login />, document.getElementById('root'));
+import LoginContainer from './session2-login-task/LoginContainer'
+
+// ReactDOM.render(<Login />, document.getElementById('root'));
+ReactDOM.render(<LoginContainer />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
