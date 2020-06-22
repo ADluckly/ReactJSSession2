@@ -1,0 +1,50 @@
+
+.email-input, .password-input{
+    width: 100%;
+    height: 45px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.email, .password{
+    margin-top: 25px;
+    .correct-email{
+        color: rgb(40, 76, 233);
+    }
+    .incorrect-email{
+        color: red;
+        display: none;
+    }
+    .empty-password{
+        color: red;
+        display: none;
+    }
+}
+
+.password-label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    span{
+        display: flex;
+    }
+    .forgot-password{
+        color: #7d7d7d;
+    }
+}
+
+.sign-in{
+    display: flex;
+    justify-content: center;
+    button{
+        background-color: pink;
+        border: 0;
+        width: 50%;
+        height: 40px;
+        border-radius: 5px;
+        margin: 25px auto;
+        color: white;
+        font-size: 25px;
+    }
+}
