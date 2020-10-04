@@ -12,4 +12,6 @@ code {
     monospace;
 }
 
-.test {}
+.test {
+  display: flex;
+}
